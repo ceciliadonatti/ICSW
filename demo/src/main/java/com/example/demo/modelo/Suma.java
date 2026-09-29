@@ -14,4 +14,8 @@ public class Suma {
         this.b = b;
     }
 
+    public double sumar() {
+        return a - b;
+    }
+
 }
