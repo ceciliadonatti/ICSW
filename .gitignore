@@ -1,5 +1,5 @@
-  .vscode/
-  .idea/
-  .env
-  target/
-  *.class
+.vscode/
+.idea/
+.env
+target/
+*.class
