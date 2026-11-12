@@ -14,5 +14,13 @@ jobs:
       - name: Checkout del repositorio
         uses: actions/checkout@v4
 
-      - name: Verificacion de integracion continua
-        run: echo "Pipeline ejecutado correctamente sin pasos de compilacion pendientes."
+      - name: Configurar Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - name: Compilar y correr tests
+        run: mvn -B test
+        working-directory: demo
